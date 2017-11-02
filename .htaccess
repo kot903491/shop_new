@@ -1,1 +1,12 @@
 AddDefaultCharset UTF-8
+DirectoryIndex /public/index.php
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -f
+
+RewriteRule ^(.+) $1 [L]
+
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+
+RewriteRule ^(.+) /public/$1 [L]
