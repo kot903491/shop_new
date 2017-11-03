@@ -6,8 +6,9 @@
  * Time: 19:48
  */
 
-require_once LIB_DIR."add_page.lib.php";
+//require_once LIB_DIR."add_page.lib.php";
 ?>
+
 <div id="content">
 <div class="form-bg">
     <form enctype="multipart/form-data" method="post">

@@ -6,11 +6,12 @@
  * Time: 21:36
  */
 require_once "page_lib.php";
-if ($_GET['act']=="add"){
+if ($_GET['page']=="add"){
     if (!isset($_POST['submit'])) {
         if (!isset($_GET['id'])) {
             $check = new page_lib();
             $check->pageNew();
+            $page=ADMIN_TPL."page.php";
         }
     }
     else {

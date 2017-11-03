@@ -5,8 +5,6 @@
  * Date: 01.11.2017
  * Time: 0:42
  */
-require_once LIB_DIR."catalog.lib.php";
-
 ?>
 <div id="content">
     <? foreach ($result as $value) : ;?>

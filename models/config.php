@@ -23,3 +23,5 @@ define("STYLE_IMG",STYLE_DIR."img"._DS);
 define("STYLE_ICO",STYLE_DIR."icons"._DS);
 define("ADMIN_DIR",TPL_DIR."admin"._DS);
 define("ADMIN_TPL",ADMIN_DIR."tpl"._DS);
+define("AUTH_DIR",ADMIN_DIR."auth"._DS);
+define("sult_cookie","cvfjee59889eg7h43wglujuj8ijhrt4frui8o");

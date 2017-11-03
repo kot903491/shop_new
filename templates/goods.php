@@ -9,7 +9,7 @@
 
 
 ?>
-<div id="content">
+<div id="content_black">
 <div id="cover"><img src="<?=GALLERY_DIR.$getPage->b_img;?>" alt="<?=$getPage->name;?>"></div>
 <h1><?=$getPage->name;?></h1>
     <div id="nal">

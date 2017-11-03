@@ -118,6 +118,7 @@ where comics_char.id=$id");
          $this->pers[]=$row['name'];
      }
      $this->pers=implode(", ",$this->pers);
+     $mysqli->close();
  }
 
 

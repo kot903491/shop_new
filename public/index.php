@@ -1,0 +1,65 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Тимурка
+ * Date: 31.10.2017
+ * Time: 12:44
+ */
+ob_start();
+require_once "../models/config.php";
+if (isset($_GET['timurka']) && isset($_GET['kot903491'])){
+    if ($_GET['timurka']=="kot903491" && $_GET['kot903491']=="timurka"){
+        $tpl_page=ADMIN_DIR."admin.php";
+        if(file_exists($tpl_page)){
+            require_once $tpl_page;
+        }
+
+    }
+}
+elseif (isset($_GET['page'])){
+    switch ($_GET['page']) {
+        case 'catalog':
+            $lib_page=LIB_DIR."catalog.lib.php";
+            if(file_exists($lib_page)){
+                require_once $lib_page;
+            }
+            break;
+        case "about":
+            $page=TPL_DIR."about.php";
+            $title = "о нас";
+            break;
+        case 'product':
+            $page = LIB_DIR . "page.lib.php";
+            if (file_exists($page)) {
+                require_once $page;
+            }
+    }
+}
+else{
+    $page=TPL_DIR."main.php";
+    $title="Главная";
+}
+
+?>
+
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="<?=STYLE_DIR;?>style.css">
+    <title><?=$title;?></title>
+</head>
+<body>
+<?
+include_once TPL_DIR."header.php";
+if(file_exists($page)){
+    include_once $page;
+}
+else{
+    include_once TPL_DIR."page_error.php";
+}
+include_once TPL_DIR."footer.php";
+ob_end_flush();
+?>
+</body>
+</html>
+
