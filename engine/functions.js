@@ -13,6 +13,7 @@ $.ajax({
     }
 });
 $(".reset").val("");
+    getReview();
 }
 
 function getReview(){

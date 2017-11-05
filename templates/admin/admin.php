@@ -17,6 +17,13 @@ if (isset($_COOKIE['auth_name']) && $_COOKIE['hash']===sult_cookie){
                 }
                 $title = "Админка-добавление";
                 break;
+            case "edit":
+                $lib_page = LIB_DIR . "edit_page.lib.php";
+                if (file_exists($lib_page)) {
+                    require_once $lib_page;
+                }
+                $title = "Админка-редактирование";
+                break;
             case "catalog":
                 $lib_page = LIB_DIR . "catalog.lib.php";
                 if (file_exists($lib_page)) {

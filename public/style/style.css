@@ -67,22 +67,24 @@ header div, nav{
 	margin:5px 5px 5px 5px;
 }
 nav{
+    height: 45%;
 	float:right;
 	margin:5px 5px 5px 5px;
 	width:32%;
+    font-family:Vetka;
 	
 }
 nav a{
 	float:left;
-	height:30px;
-	line-height:30px;
+	height:15px;
+	line-height:15px;
 	width:30%;
 	font-family:Vetka;
 	letter-spacing:2px;
 	font-size:25px;
 	color:#E1090E;
     text-decoration: none;
-	margin:45px 0 0 0;
+	margin:20px 0 0 0;
 }
 nav a:hover{
 	font-family:Sprite Graffity Shadow;
@@ -482,6 +484,9 @@ footer p{
     text-align: right;
     font-family: Arial;
     font-size: 10px;
+}
+#review hr{
+    border: 1px solid gray;
 }
 #reviewform form{
 	width: 95%;

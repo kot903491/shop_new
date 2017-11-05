@@ -10,6 +10,7 @@
 <header>
     <div id="logo"><img src="<?=STYLE_IMG;?>logo.png" alt="Логотип"/></div>
     <div id="banner">Магазин комиксов</div>
+    <nav id="basket">В корзине 50 товаров на сумму 1000000 тг</nav>
     <nav>
         <a href="index.php">Главная</a>
         <a href="index.php?page=catalog">Каталог</a>

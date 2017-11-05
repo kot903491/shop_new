@@ -12,8 +12,8 @@ $res=$mysqli->query("SELECT password FROM users WHERE login='$login'");
 if($res){
     $db_pass=$res->fetch_assoc();
     if($db_pass['password'] == md5($_POST['password']).sult_admin){
-        setcookie('auth_name',$login,time()+(600),'/');
-        setcookie('hash',sult_cookie,time()+(600),'/');
+        setcookie('auth_name',$login,time()+(3600),'/');
+        setcookie('hash',sult_cookie,time()+(3600),'/');
         header("Refresh: 5; /index.php?timurka=kot903491&kot903491=timurka");
         $str="Авторизация успешна. Вы будете перенаправлены через 5 секунд";
     }

@@ -20,12 +20,13 @@ if (isset($_POST['id'])&&isset($_POST['name'])&&isset($_POST['review'])) {
 }
 else{
     $id = (int)$_POST['id'];
+    $id=1;
     $mysqli = new mysqli(SQL_SERVER, SQL_USER, SQL_PASS, dbname, SQL_PORT);
     $res=$mysqli->query("SELECT name,datetime,review from review where id=$id ORDER BY datetime");
     $str="";
     while ($result=$res->fetch_assoc()){
         $name=$result['name'];
-        $dat=$result['datetime'];
+        $dat=date("d.m.y H:m",strtotime($result['datetime']));
         $rew=$result['review'];
         $str.="<p>$rew</p><span>$name $dat</span><hr>";
     }

@@ -6,6 +6,7 @@
  * Time: 12:44
  */
 ob_start();
+date_default_timezone_set("Asia/Aqtobe");
 require_once "../models/config.php";
 if (isset($_GET['timurka']) && isset($_GET['kot903491'])){
     if ($_GET['timurka']=="kot903491" && $_GET['kot903491']=="timurka"){

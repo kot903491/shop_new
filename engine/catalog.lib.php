@@ -16,6 +16,10 @@ if(isset($_GET['act'])){
         $mysqli->close();
         header("Location:index.php?timurka=kot903491&kot903491=timurka&page=catalog");
     }
+    elseif($_GET['act']=='edit' && isset($_GET['id'])){
+        $mysqli = mysqli_connect(SQL_SERVER, SQL_USER, SQL_PASS, dbname, SQL_PORT);
+        $id=(int)htmlspecialchars(strip_tags($_GET['id']));
+    }
 }
 else {
     $mysqli = mysqli_connect(SQL_SERVER, SQL_USER, SQL_PASS, dbname, SQL_PORT);

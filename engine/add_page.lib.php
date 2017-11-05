@@ -11,6 +11,7 @@ if ($_GET['page']=="add"){
         if (!isset($_GET['id'])) {
             $check = new page_lib();
             $check->pageNew();
+            $req="requared";
             $page=ADMIN_TPL."page.php";
         }
     }
