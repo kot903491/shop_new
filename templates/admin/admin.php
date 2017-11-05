@@ -6,28 +6,36 @@
  * Time: 0:11
  */
 
-if (isset($_GET['act'])){
-    switch ($_GET['act']){
-        case "add":
-            $admin_page=ADMIN_TPL."page.php";
-            break;
-        case "catalog":
-            $admin_page=ADMIN_TPL."catalog.php";
-            break;
-        case "sprav":
-            $admin_page=ADMIN_TPL."sprav.php";
-            break;
+if (isset($_COOKIE['auth_name']) && $_COOKIE['hash']===sult_cookie){
+    //setcookie('hash',"",time()-1,'/');
+    if (isset($_GET['page'])) {
+        switch ($_GET['page']) {
+            case "add":
+                $lib_page = LIB_DIR . "add_page.lib.php";
+                if (file_exists($lib_page)) {
+                    require_once $lib_page;
+                }
+                $title = "Админка-добавление";
+                break;
+            case "catalog":
+                $lib_page = LIB_DIR . "catalog.lib.php";
+                if (file_exists($lib_page)) {
+                    $admin = true;
+                    require_once $lib_page;
+                };
+                break;
+            case "sprav":
+                $admin_page = ADMIN_TPL . "sprav.php";
+                break;
+        }
+    } else {
+        $page = ADMIN_TPL . "menu.php";
+        $title = "Админка";
     }
 }
 else{
-    $admin_page=ADMIN_TPL."menu.php";
+    $page = AUTH_DIR . "admin.php";
+    $title = "Вход в админку";
 }
-
-if (file_exists($admin_page)) {
-    include_once $admin_page;
-    }
-
-
-
 ?>
-
+<link rel="stylesheet" href="<?=STYLE_DIR;?>admin.css">

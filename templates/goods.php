@@ -9,6 +9,7 @@
 
 
 ?>
+<script src="<?=LIB_DIR;?>functions.js"></script>
 <div id="content_black">
 <div id="cover"><img src="<?=GALLERY_DIR.$getPage->b_img;?>" alt="<?=$getPage->name;?>"></div>
 <h1><?=$getPage->name;?></h1>
@@ -40,6 +41,19 @@
                     <td><li>Переплет:</li> <td><?=$getPage->bind;?></td></tr>
                 <tr><td><li>Автор/Сценарист:</li></td> <td><?=$getPage->autor;?></td></tr>
             </table>
+        </section>
+        <section id="content-tab3">
+            <div id="review">
+
+            </div>
+            <div id="answer"></div>
+            <div id="reviewform">
+                <input type="hidden" value="<?=$id;?>" id="id">
+                <div><input type="text" id="username" value="Введите ваше имя" class="reset" required></div>
+                <div><input type="email" id="email" value="Введите ваш e-mail" class="reset" required></div>
+                <div><textarea id="text" class="reset" required></textarea></div>
+                <div><button onclick="setReview()">Отправить</button></div>
+            </div>
         </section>
     </div>
 </div>

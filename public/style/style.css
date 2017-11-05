@@ -466,3 +466,34 @@ footer p{
 	}
 }
 
+#review{
+	width: 95%;
+	height: 300px;
+	border: solid 1px;
+	display: block;
+	overflow-y: scroll;
+    text-align: right;
+}
+#review p{
+    text-align: left;
+    font-size: 14px;
+}
+#review span{
+    text-align: right;
+    font-family: Arial;
+    font-size: 10px;
+}
+#reviewform form{
+	width: 95%;
+	overflow-y: hidden;
+	border: solid 1px;
+}
+#reviewform textarea{
+	width: 90%;
+	height:120px;
+}
+#reviewform input{
+	width: 70%;
+    height: 25px;
+    margin: 2px;
+}

@@ -46,6 +46,7 @@ else{
 <html>
 <head>
     <link rel="stylesheet" href="<?=STYLE_DIR;?>style.css">
+    <script src="<?=LIB_DIR;?>jquery.js"></script>
     <title><?=$title;?></title>
 </head>
 <body>
