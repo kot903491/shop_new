@@ -20,7 +20,6 @@ if (isset($_POST['id'])&&isset($_POST['name'])&&isset($_POST['review'])) {
 }
 else{
     $id = (int)$_POST['id'];
-    $id=1;
     $mysqli = new mysqli(SQL_SERVER, SQL_USER, SQL_PASS, dbname, SQL_PORT);
     $res=$mysqli->query("SELECT name,datetime,review from review where id=$id ORDER BY datetime");
     $str="";
