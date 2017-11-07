@@ -50,8 +50,6 @@ else{
 }
 
 ?>
-
-<!doctype html>
 <html>
 <head>
     <link rel="stylesheet" href="<?=STYLE_DIR;?>style.css">

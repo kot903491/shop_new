@@ -74,3 +74,14 @@ function BasketTable() {
 $(document).ready(function(){
     BasketTable();
 });
+
+function deleteBasketId(key) {
+    $.ajax({
+        method: "POST",
+        url: "../engine/basket.php",
+        data: "basket=deleteBasket&key=" + key,
+        success:function (html) {
+            $("#baskettable").html(html);
+        }
+    });
+}
