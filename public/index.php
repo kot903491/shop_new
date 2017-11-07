@@ -5,6 +5,7 @@
  * Date: 31.10.2017
  * Time: 12:44
  */
+session_start();
 ob_start();
 date_default_timezone_set("Asia/Aqtobe");
 require_once "../models/config.php";
@@ -33,6 +34,13 @@ elseif (isset($_GET['page'])){
             $page = LIB_DIR . "page.lib.php";
             if (file_exists($page)) {
                 require_once $page;
+                break;
+            }
+        case 'basket':
+            $page = LIB_DIR . "basket.lib.php";
+            if (file_exists($page)) {
+                require_once $page;
+                break;
             }
     }
 }
@@ -48,6 +56,7 @@ else{
 <head>
     <link rel="stylesheet" href="<?=STYLE_DIR;?>style.css">
     <script src="<?=LIB_DIR;?>jquery.js"></script>
+    <script src="<?=LIB_DIR;?>functions.js"></script>
     <title><?=$title;?></title>
 </head>
 <body>
@@ -61,6 +70,7 @@ else{
 }
 include_once TPL_DIR."footer.php";
 ob_end_flush();
+session_destroy();
 ?>
 </body>
 </html>

@@ -12,11 +12,15 @@ if (isset($_POST['id'])&&isset($_POST['name'])&&isset($_POST['review'])) {
     $name = htmlspecialchars(strip_tags($_POST['name']));
     $em = htmlspecialchars(strip_tags($_POST['email']));
     $review = htmlspecialchars(strip_tags($_POST['review']));
-    $mysqli = new mysqli(SQL_SERVER, SQL_USER, SQL_PASS, dbname, SQL_PORT);
-    $mysqli->query("INSERT INTO review(id,name,email,datetime,review) VALUES($id,'$name','$em','$dat','$review')");
-    unset($_POST);
-    $mysqli->close();
-    echo "Данные внесены";
+    if($name!="" && $em!="" && $review!="") {
+        $mysqli = new mysqli(SQL_SERVER, SQL_USER, SQL_PASS, dbname, SQL_PORT);
+        $mysqli->query("INSERT INTO review(id,name,email,datetime,review) VALUES($id,'$name','$em','$dat','$review')");
+        unset($_POST);
+        $mysqli->close();
+        echo "Данные внесены";
+    }else{
+        echo "Заполнены не все поля.";
+    }
 }
 else{
     $id = (int)$_POST['id'];

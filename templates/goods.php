@@ -9,13 +9,12 @@
 
 
 ?>
-<script src="<?=LIB_DIR;?>functions.js"></script>
 <div id="content_black">
 <div id="cover"><img src="<?=GALLERY_DIR.$getPage->b_img;?>" alt="<?=$getPage->name;?>"></div>
 <h1><?=$getPage->name;?></h1>
     <div id="nal">
         <p>Есть в наличии</p>
-        <p>Цена: <?=$getPage->price;?>тг</p>
+        <div class="button11" onclick="setBasket();">Цена: <?=$getPage->price;?>тг</div>
         <p>Доставка по городу бесплатно</p></div>
 
     <div class="tabs">
@@ -26,7 +25,7 @@
         <label for="tab2" title="Характеристики">Характеристики</label>
 
         <input id="tab3" type="radio" name="tabs">
-        <label for="tab3" title="Отзывы">Отзывы</label>
+        <label for="tab3" title="Отзывы" onclick="getReview()">Отзывы</label>
 
         <section id="content-tab1">
             <?=$getPage->f_desk;?>
