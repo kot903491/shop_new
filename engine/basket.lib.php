@@ -61,6 +61,7 @@ else {
         }
     } else {
         $page = ADMIN_TPL . "basket.php";
+        $title="Админка-корзина";
     }
 }
 
@@ -101,4 +102,5 @@ function changeOrderStatus($id){
         $s=0;
     }
     $mysqli->query("UPDATE `order` SET order_status=$s where id_order=$id");
+    $mysqli->close();
 }
