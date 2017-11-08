@@ -85,6 +85,7 @@ nav{
 }
 #baskettable{
 	font-family:Vetka;
+	float: left;
 }
 #baskettable td{
 	padding: 2px 5px;
@@ -555,4 +556,9 @@ div.button11:hover:after {
 }
 div.button11:active:after {
 	background-image: linear-gradient(#c61e40, #d4536d);
+}
+#bas{
+	margin-right: 10px;
+	float: right;
+	font-family:Vetka;
 }

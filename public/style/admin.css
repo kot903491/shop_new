@@ -158,3 +158,11 @@
     color:#EFF42B;
 }
 
+#admin_basket{
+    font-family:Vetka;
+    float: left;
+}
+#admin_basket td{
+    padding: 2px 5px;
+    border: solid 1px;
+}

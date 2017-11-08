@@ -85,3 +85,14 @@ function deleteBasketId(key) {
         }
     });
 }
+
+function changeOrderStatus(key) {
+    $.ajax({
+        method:"POST",
+        url:"../engine/basket.lib.php",
+        data:"act=setBasket&id="+key,
+        success:function (html) {
+            $("#admin_basket").html(html);
+        }
+    });
+}

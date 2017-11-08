@@ -34,6 +34,13 @@ if (isset($_COOKIE['auth_name']) && $_COOKIE['hash']===sult_cookie){
             case "sprav":
                 $admin_page = ADMIN_TPL . "sprav.php";
                 break;
+            case "basket":
+                $lib_page=LIB_DIR."basket.lib.php";
+                if (file_exists($lib_page)) {
+                    $admin = true;
+                    require_once $lib_page;
+                };
+                break;
         }
     } else {
         $page = ADMIN_TPL . "menu.php";
