@@ -1,0 +1,16 @@
+<html>
+<head>
+    {{ style.css|raw }}
+    {{ ajax.jquery|raw }}
+    {{ ajax.basket_func|raw }}
+    <title>{{ title }}</title>
+</head>
+<body>
+{% include header %}
+
+{{ content|raw }}
+
+{% include footer %}
+
+</body>
+</html>

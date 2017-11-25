@@ -56,7 +56,16 @@ else {
             } else {
                 $msg = "Редактирование и оформление заказа";
             }
-            $page = TPL_DIR . "basket.php";
+            try{
+                $loader = new Twig_Loader_Filesystem(TPL_DIR);
+                $twig=new Twig_Environment($loader);
+                $template=$twig->loadTemplate('basket.tmpl');
+                $content=$template->render(array('msg'=>$msg));
+            }
+            catch (Exception $e){
+                die('ERROR: '.$e->getMessage());
+            }
+
             $title = "Корзина";
         }
     } else {

@@ -25,6 +25,7 @@ else {
     $mysqli = mysqli_connect(SQL_SERVER, SQL_USER, SQL_PASS, dbname, SQL_PORT);
     $res = $mysqli->query("select product.id,product.name, desk.s_desk, gallery.s_img FROM product inner join desk on desk.id=product.id inner join gallery on gallery.id=product.id");
     while ($res_all = $res->fetch_assoc()) {
+        $res_all['s_img']=GALLERY_DIR.$res_all['s_img'];
         $result[] = $res_all;
     }
     $mysqli->close();
@@ -33,7 +34,15 @@ else {
         $title = "Админка-Каталог комиксов";
     }
     else{
-        $page = TPL_DIR . "catalog.php";
+        try{
+            $loader = new Twig_Loader_Filesystem(TPL_DIR);
+            $twig=new Twig_Environment($loader);
+            $template=$twig->loadTemplate('catalog.tmpl');
+            $content=$template->render(array('cont'=>$result));
+        }
+        catch (Exception $e){
+            die('ERROR: '.$e->getMessage());
+        }
         $title = "Каталог комиксов";
     }
 }

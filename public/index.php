@@ -9,6 +9,10 @@ session_start();
 ob_start();
 date_default_timezone_set("Asia/Aqtobe");
 require_once "../models/config.php";
+require_once TWIG_DIR.'Autoloader.php';
+Twig_Autoloader::register();
+$style['css']='<link rel="stylesheet" href="'.STYLE_DIR.'style.css">';
+$content='<div id="content"><h1>Страница не найдена</h1></div>';
 if (isset($_GET['timurka']) && isset($_GET['kot903491'])){
     if ($_GET['timurka']=="kot903491" && $_GET['kot903491']=="timurka"){
         $tpl_page=ADMIN_DIR."admin.php";
@@ -27,7 +31,15 @@ elseif (isset($_GET['page'])){
             }
             break;
         case "about":
-            $page=TPL_DIR."about.php";
+            try{
+                $loader = new Twig_Loader_Filesystem(TPL_DIR);
+                $twig=new Twig_Environment($loader);
+                $template=$twig->loadTemplate('about.tmpl');
+                $content=$template->render(array('style'=>$style));
+            }
+            catch (Exception $e){
+                die('ERROR: '.$e->getMessage());
+            }
             $title = "о нас";
             break;
         case 'product':
@@ -45,31 +57,28 @@ elseif (isset($_GET['page'])){
     }
 }
 else{
-    $page=TPL_DIR."main.php";
+    require_once LIB_DIR."main.lib.php";
     $title="Главная";
 }
 
-?>
-<html>
-<head>
-    <link rel="stylesheet" href="<?=STYLE_DIR;?>style.css">
-    <script src="<?=LIB_DIR;?>jquery.js"></script>
-    <script src="<?=LIB_DIR;?>functions.js"></script>
-    <title><?=$title;?></title>
-</head>
-<body>
-<?
-include_once TPL_DIR."header.php";
-if(file_exists($page)){
-    include_once $page;
+
+
+try{
+    $loader = new Twig_Loader_Filesystem(TPL_DIR);
+    $twig=new Twig_Environment($loader);
+    $template=$twig->loadTemplate('index.tmpl');
+    echo $template->render(array('title'=>$title,
+        'footer'=>'footer.tmpl',
+        'header'=>'header.tmpl',
+        'style'=>$style,
+        'ajax'=>$ajax,
+        'content'=>$content));
 }
-else{
-    include_once TPL_DIR."page_error.php";
+catch (Exception $e){
+    die('ERROR: '.$e->getMessage());
 }
-include_once TPL_DIR."footer.php";
+
 ob_end_flush();
 session_destroy();
-?>
-</body>
-</html>
+
 
