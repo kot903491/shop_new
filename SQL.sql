@@ -65,7 +65,7 @@ CREATE TABLE `comics_char` (
 
 LOCK TABLES `comics_char` WRITE;
 /*!40000 ALTER TABLE `comics_char` DISABLE KEYS */;
-INSERT INTO `comics_char` VALUES (1,1);
+INSERT INTO `comics_char` VALUES (1,1),(3,1),(6,1),(7,1),(3,2),(7,2),(2,3);
 /*!40000 ALTER TABLE `comics_char` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +91,7 @@ CREATE TABLE `desk` (
 
 LOCK TABLES `desk` WRITE;
 /*!40000 ALTER TABLE `desk` DISABLE KEYS */;
-INSERT INTO `desk` VALUES (1,'Загадка Палача, или начало истории о Бэтмене и Робине','<p>На заре своей карьеры Темного Рыцаря Бэтмен пытается выследить неуловимого убийцу копов по кличке Палач, прежде чем тот нанесет очередной удар. Единственный намек на личность преступника — листок с детской игрой, приколотый к телам жертв. В качестве главных подозреваемых выступает целая галерея злодеев: Двуликий, Джокер, Загадочник, Женщина-Кошка. Даже полиции во главе с недавно назначенным комиссаром Гордоном доверять нельзя.</p><p>Чтобы разрешить загадку, Бэтмену придется заручиться помощью с самой неожиданной стороны. Он возьмет в напарники осиротевшего мальчика, который навсегда изменит его жизнь. Они станут известны как Бэтмен и Робин. Их история перед вами.</p><p>В качестве авторов книги выступает знаменитый тандем: лауреаты премии Айснера Джеф Лоэб и Тим Сэйл («Супермен на все времена», «Бэтмен: Долгий Хэллоуин»). Абсолютное издание включает оригинальную серию из 0–13 выпусков, интервью Джефа Лоэба, вступительные статьи Тима Сэйла и сценариста кинотрилогии о Бэтмене Дэвида С. Гойера, а также множество набросков и эскизов</p>');
+INSERT INTO `desk` VALUES (1,'Загадка Палача, или начало истории о Бэтмене и Робине','<p>На заре своей карьеры Темного Рыцаря Бэтмен пытается выследить неуловимого убийцу копов по кличке Палач, прежде чем тот нанесет очередной удар. Единственный намек на личность преступника — листок с детской игрой, приколотый к телам жертв. В качестве главных подозреваемых выступает целая галерея злодеев: Двуликий, Джокер, Загадочник, Женщина-Кошка. Даже полиции во главе с недавно назначенным комиссаром Гордоном доверять нельзя.</p><p>Чтобы разрешить загадку, Бэтмену придется заручиться помощью с самой неожиданной стороны. Он возьмет в напарники осиротевшего мальчика, который навсегда изменит его жизнь. Они станут известны как Бэтмен и Робин. Их история перед вами.</p><p>В качестве авторов книги выступает знаменитый тандем: лауреаты премии Айснера Джеф Лоэб и Тим Сэйл («Супермен на все времена», «Бэтмен: Долгий Хэллоуин»). Абсолютное издание включает оригинальную серию из 0–13 выпусков, интервью Джефа Лоэба, вступительные статьи Тима Сэйла и сценариста кинотрилогии о Бэтмене Дэвида С. Гойера, а также множество набросков и эскизов.</p>'),(2,'Одинокий. Измученный. Голодный. Жаждущий мщения','<p>Легкомысленный повеса Оливер Квин плевать хотел на всех и вся — в том числе и на себя самого. Но когда его — обманутого и полумертвого — выбросило течением на тропический остров, Оливер понял, что кое-что его все-таки заботит: справедливость!</p><p> Вооруженный только самодельным луком и стрелами, Оливер пытается выжить в незнакомой суровой местности, одновременно ведя войну против кровожадных наркодельцов, по вине которых он и оказался в изгнании.</p><p> «Зеленая стрела. Год первый» — каноническая предыстория всеми любимого Изумрудного Лучника, которую расскажет звездный тандем в лице сценариста Энди Диггла («Бэтмен», «Адам Стрэндж») и художника Джока («Болотная тварь», «Хеллблэйзер»). В книгу также вошли иллюстрированные отрывки сценария, раскадровки и предисловие, написанное Брайаном К. Воном ( «Y: последний мужчина»).</p><p> «От Энди Диггла и Джока, двух моих самых любимых творцов в современной индустрии комиксов, я меньшего и не ожидал. [Они] составляют тот уникальный дуэт сценариста и художника, в котором один неизменно помогает другому достичь вершин мастерства». — Брайан К. Вон</p>'),(3,'Он стар, но еще полон сил и опасен, как никогда.','<p>Писатель и художник Фрэнк Миллер совместно с Клаусом Янсеном и Линн Варли заново, с чистого листа создали легенду о Бэтмене в своей саге о городе Готэме, который в ближайшем будущем, спустя десять лет после того, как Бэтмен удалился от дел, пришел в полный упадок.</p><p> С момента первой публикации графического романа «Бэтмен. Возвращение Темного Рыцаря» прошло уже тридцать лет, однако он остается бесспорной классикой и входит в канон мира комиксов. Тридцать лет назад, в феврале 1986 года вышел первый выпуск этой серии на Западе.</p><p> В российское издание входят все имеющиеся на сегодняшний день материалы по этому комиксу – 3 предисловия – одно от Алана Мура к самому первому изданию и два юбилейных от Фрэнка Миллера – к изданиям 1996 и 2006 годов; два рабочих сценария (первый представляет собой скорее первоначальную заявку на создание комикса, а второй, более проработанный, детальный, где прослеживается создание образов); большое количество скетчей; галерею обложек и фото атрибутики по мотивам комикса.</p>'),(6,'test1','<p>test1 gfhoifgonbn sdnuirngiobnsgio dfinghhiskbefjsdbfsj dflmblf;ghml;yhn vbsdvfervuierb dntrnhetklsktrb dfgheugrhwriothwrio</p>'),(7,'fjgnfjn fdungidbgsdib rigotrnhtornri syfsvudfd','<p>drgnisnionr80engheb sn styngrsitobns iosrwur0nmy9tmbsu jeurigb euroiunvm </p>');
 /*!40000 ALTER TABLE `desk` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,8 +117,65 @@ CREATE TABLE `gallery` (
 
 LOCK TABLES `gallery` WRITE;
 /*!40000 ALTER TABLE `gallery` DISABLE KEYS */;
-INSERT INTO `gallery` VALUES (1,'CS_1_s.jpg','CS_1.jpg');
+INSERT INTO `gallery` VALUES (1,'CS_1_s.jpg','CS_1.jpg'),(2,'CS_2_s.jpg','CS_2.jpg'),(3,'CS_3_s.jpg','CS_3.jpg'),(6,'CS_6_s.jpg','CS_6.jpg'),(7,'CS_7_s.jpg','CS_7.jpg');
 /*!40000 ALTER TABLE `gallery` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `order`
+--
+
+DROP TABLE IF EXISTS `order`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `order` (
+  `id_order` int(11) NOT NULL AUTO_INCREMENT,
+  `order_date` datetime NOT NULL,
+  `order_name` varchar(45) NOT NULL,
+  `order_tel` varchar(45) NOT NULL,
+  `opder_email` varchar(45) DEFAULT NULL,
+  `order_address` varchar(255) NOT NULL,
+  `order_status` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id_order`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order`
+--
+
+LOCK TABLES `order` WRITE;
+/*!40000 ALTER TABLE `order` DISABLE KEYS */;
+INSERT INTO `order` VALUES (1,'2017-11-08 17:11:54','kot903491','+789456123','kot903491@gmail.com','fhfghfghfghfghfg',1),(2,'2017-11-08 17:11:51','kot903491','+789456123','kot903491@gmail.com','jlhjkhjkhjkhj',1),(3,'2017-11-08 19:11:07','kot903491','+789456123','kot903491@gmail.com','dfgdfgdfgdfgdfg',1);
+/*!40000 ALTER TABLE `order` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `order_product`
+--
+
+DROP TABLE IF EXISTS `order_product`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `order_product` (
+  `id_order` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL,
+  `count` int(11) NOT NULL,
+  KEY `fk_order_product_idx` (`id_product`),
+  KEY `fk_order_id_idx` (`id_order`),
+  CONSTRAINT `fk_order_id` FOREIGN KEY (`id_order`) REFERENCES `order` (`id_order`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_order_product` FOREIGN KEY (`id_product`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order_product`
+--
+
+LOCK TABLES `order_product` WRITE;
+/*!40000 ALTER TABLE `order_product` DISABLE KEYS */;
+INSERT INTO `order_product` VALUES (1,2,1),(1,1,5),(2,2,1),(2,1,5),(3,1,1),(3,2,1),(3,3,1);
+/*!40000 ALTER TABLE `order_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -161,7 +218,7 @@ CREATE TABLE `product` (
   `pages` int(11) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,7 +227,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,'Бэтмен. Темная победа','Джэф Лоэб','Тим Сэйл',408,1000.00);
+INSERT INTO `product` VALUES (1,'Бэтмен. Темная победа','Джэф Лоэб','Тим Сэйл',408,1000.00),(2,'Зеленая стрела. Год первый','Энди Дигг','Джок',16,500.00),(3,'Бэтмен. Возвращение темного рыцаря','Фрэнк Миллер','Фрэнк Миллер, Клаус Янсен',264,1200.00),(6,'test1','test1','test1',1,1.00),(7,'test2','test2','test2',2,2.00);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -253,8 +310,36 @@ CREATE TABLE `publishing` (
 
 LOCK TABLES `publishing` WRITE;
 /*!40000 ALTER TABLE `publishing` DISABLE KEYS */;
-INSERT INTO `publishing` VALUES (1,1,1,1);
+INSERT INTO `publishing` VALUES (1,1,2,1),(2,1,1,1),(3,1,1,1),(6,1,1,1),(7,1,1,2);
 /*!40000 ALTER TABLE `publishing` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `review`
+--
+
+DROP TABLE IF EXISTS `review`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `review` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `datetime` datetime NOT NULL,
+  `review` text NOT NULL,
+  KEY `fk_reviw_id_idx` (`id`),
+  CONSTRAINT `fk_reviw_id` FOREIGN KEY (`id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `review`
+--
+
+LOCK TABLES `review` WRITE;
+/*!40000 ALTER TABLE `review` DISABLE KEYS */;
+INSERT INTO `review` VALUES (1,'Тимур','kot903491@gmail.com','2017-11-05 18:11:04','Первый комментарий'),(1,'Тимур','kot903491@gmail.com','2017-11-05 22:11:15','Проверяем временную зону'),(1,'kot903491','kot903491@gmail.com','2017-11-06 00:11:48','И еще раз проверяем временную зону'),(1,'kot903491','kot903491@gmail.com','2017-11-06 00:11:54','Проверяю обновляшку'),(3,'автор','kot903491@gmail.com','2017-11-06 22:11:13','Бэтмен. Возвращение темного рыцаря'),(2,'автор','kot903491@gmail.com','2017-11-06 22:11:59','Зеленая стрела. Год первый');
+/*!40000 ALTER TABLE `review` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -292,4 +377,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-03 16:00:26
+-- Dump completed on 2017-11-28 21:31:55
