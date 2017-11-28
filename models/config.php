@@ -38,3 +38,4 @@ $style=array(
 
 $ajax=array('jquery'=>'<script src="'.LIB_DIR.'jquery.js"></script>',
     'basket_func'=>'<script src="'.LIB_DIR.'functions.js"></script>');
+$basket_view=true;

@@ -11,7 +11,7 @@ date_default_timezone_set("Asia/Aqtobe");
 require_once "../models/config.php";
 require_once TWIG_DIR.'Autoloader.php';
 Twig_Autoloader::register();
-$style['css']='<link rel="stylesheet" href="'.STYLE_DIR.'style.css">';
+$style['css']=STYLE_DIR.'style.css';
 $content='<div id="content"><h1>Страница не найдена</h1></div>';
 if (isset($_GET['timurka']) && isset($_GET['kot903491'])){
     if ($_GET['timurka']=="kot903491" && $_GET['kot903491']=="timurka"){
@@ -72,7 +72,8 @@ try{
         'header'=>'header.tmpl',
         'style'=>$style,
         'ajax'=>$ajax,
-        'content'=>$content));
+        'content'=>$content,
+        'basket_view'=>$basket_view));
 }
 catch (Exception $e){
     die('ERROR: '.$e->getMessage());

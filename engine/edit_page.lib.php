@@ -31,5 +31,13 @@ elseif($_GET['page']=='edit' && isset($_GET['id'])){
     $id=(int)htmlspecialchars(strip_tags($_GET['id']));
     $check=new page_lib();
     $check->editPage($id);
-    $page=ADMIN_TPL."page.php";
+    try{
+        $loader = new Twig_Loader_Filesystem(ADMIN_TPL);
+        $twig=new Twig_Environment($loader);
+        $template=$twig->loadTemplate('page.tmpl');
+        $content=$template->render(array('check'=>$check));
+    }
+    catch (Exception $e){
+        die('ERROR: '.$e->getMessage());
+    }
 }

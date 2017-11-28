@@ -11,8 +11,18 @@ if ($_GET['page']=="add"){
         if (!isset($_GET['id'])) {
             $check = new page_lib();
             $check->pageNew();
+            $title = "Админка-добавление";
             $req="requared";
-            $page=ADMIN_TPL."page.php";
+            try{
+                $loader = new Twig_Loader_Filesystem(ADMIN_TPL);
+                $twig=new Twig_Environment($loader);
+                $template=$twig->loadTemplate('page.tmpl');
+                $content=$template->render(array('check'=>$check,
+                    'req'=>$req));
+            }
+            catch (Exception $e){
+                die('ERROR: '.$e->getMessage());
+            }
         }
     }
     else {
@@ -36,7 +46,6 @@ if ($_GET['page']=="add"){
         }
     }
 }
-
 
 function create_thumb($path, $save, $width, $height) {
     $info = getimagesize($path); //получаем размеры картинки и ее тип

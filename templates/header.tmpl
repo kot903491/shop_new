@@ -1,7 +1,9 @@
 <header>
     <div id="logo"><img src="{{ style.logo }}" alt="Логотип"/></div>
     <div id="banner">Магазин комиксов</div>
+    {% if basket_view %}
     <nav id="basket"></nav>
+    {% endif %}
     <nav>
         <a href="index.php">Главная</a>
         <a href="index.php?page=catalog">Каталог</a>

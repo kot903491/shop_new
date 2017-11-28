@@ -180,17 +180,21 @@ where comics_char.id=$id");
         $stmt->bind_param('sssidi', $this->name, $this->autor, $this->paint, $this->pages, $this->price, $id);
         $stmt->execute();
         $stmt->close();
-        $stmt = $mysqli->prepare("UPDATE publishing set id=?,id_publ_o=?,id_publ_l=?,id_bin=? WHERE id=?");
-        $stmt->bind_param('iiiii', $i, $this->publ_o, $this->publ_l, $this->bind, $id);
+        $stmt = $mysqli->prepare("UPDATE publishing set id_publ_o=?,id_publ_l=?,id_bin=? WHERE id=?");
+        $stmt->bind_param('iiii', $this->publ_o, $this->publ_l, $this->bind, $id);
         $stmt->execute();
         $stmt->close();
-        $stmt = $mysqli->prepare("UPDATE comics_char set id=?,id_pers=? WHERE id=?");
+        $stmt = $mysqli->prepare("DELETE FROM comics_char WHERE id=?");
+        $stmt->bind_param('i', $id);
+        $stmt->execute();
+        $stmt->close();
+        $stmt = $mysqli->prepare("INSERT INTO comics_char(id,id_pers) values(?,?)");
         foreach ($this->pers as $value) {
             $value = (int)$value;
-            $stmt->bind_param('iii', $i, $value, $id);
+            $stmt->bind_param('ii', $id, $value);
             $stmt->execute();
-            $stmt->close();
         }
+        $stmt->close();
         $stmt=$mysqli->prepare("UPDATE desk set s_desk=?,f_desk=? WHERE id=?");
         $stmt->bind_param('ssi',$this->s_desk,$this->f_desk,$id);
         $stmt->execute();
@@ -198,8 +202,8 @@ where comics_char.id=$id");
         $mysqli->close();
         if (isset($_FILES['images'])) {
             $type = explode(".", $_FILES['images']['name']);
-            $b_img = "CS_$i." . $type[1];
-            $s_img = "CS_" . $i . "_s." . $type[1];
+            $b_img = "CS_$id." . $type[1];
+            $s_img = "CS_" . $id . "_s." . $type[1];
             $b_path = GALLERY_DIR . $b_img;
             $s_path = GALLERY_DIR . $s_img;
             if (move_uploaded_file($_FILES['images']['tmp_name'], GALLERY_DIR . $b_img)) {

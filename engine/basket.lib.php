@@ -69,7 +69,15 @@ else {
             $title = "Корзина";
         }
     } else {
-        $page = ADMIN_TPL . "basket.php";
+        try{
+            $loader = new Twig_Loader_Filesystem(ADMIN_TPL);
+            $twig=new Twig_Environment($loader);
+            $template=$twig->loadTemplate('basket.tmpl');
+            $content=$template->render(array('getBasketTable'=>getBasketTable()));
+        }
+        catch (Exception $e){
+            die('ERROR: '.$e->getMessage());
+        }
         $title="Админка-корзина";
     }
 }

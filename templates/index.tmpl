@@ -1,6 +1,9 @@
 <html>
 <head>
-    {{ style.css|raw }}
+    <link rel="stylesheet" href="{{ style.css }}">
+    {% if style.css_admin %}
+    <link rel="stylesheet" href="{{ style.css_admin }}">
+    {% endif %}
     {{ ajax.jquery|raw }}
     {{ ajax.basket_func|raw }}
     <title>{{ title }}</title>

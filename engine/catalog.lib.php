@@ -30,7 +30,18 @@ else {
     }
     $mysqli->close();
     if($admin) {
-        $page = ADMIN_TPL . "catalog.php";
+        try{
+            $url=array('edit'=>str_replace("catalog","edit",$_SERVER["REQUEST_URI"])."&id=",
+                    'delete'=>$_SERVER["REQUEST_URI"].'&act=delete&id=');
+            $loader = new Twig_Loader_Filesystem(ADMIN_TPL);
+            $twig=new Twig_Environment($loader);
+            $template=$twig->loadTemplate('catalog.tmpl');
+            $content=$template->render(array('cont'=>$result,
+                'url'=>$url));
+        }
+        catch (Exception $e){
+            die('ERROR: '.$e->getMessage());
+        }
         $title = "Админка-Каталог комиксов";
     }
     else{
