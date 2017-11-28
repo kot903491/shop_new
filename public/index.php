@@ -60,9 +60,6 @@ else{
     require_once LIB_DIR."main.lib.php";
     $title="Главная";
 }
-
-
-
 try{
     $loader = new Twig_Loader_Filesystem(TPL_DIR);
     $twig=new Twig_Environment($loader);
