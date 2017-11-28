@@ -20,8 +20,8 @@
 	font-family:Vetka;
 	src:url(fonts/Vetka.otf);
 }
-
 html,body{
+	width: 1366px;
 	height:100%;
 	overflow:hidden;
 }
