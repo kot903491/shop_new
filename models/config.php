@@ -45,3 +45,5 @@ $ajax=array('jquery'=>'<script src="'.JS_DIR.'jquery.js"></script>',
 $basket_view=true;
 $review=false;
 $catalog=false;
+
+

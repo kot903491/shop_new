@@ -12,7 +12,7 @@ require_once "../models/config.php";
 require_once TWIG_DIR.'Autoloader.php';
 Twig_Autoloader::register();
 spl_autoload_register(function ($ClassName){
-    include CLASS_DIR.$ClassName.'.php';});
+    include_once CLASS_DIR.$ClassName.'.php';});
 
 $style['css']=STYLE_DIR.'style.css';
 $content='<div id="content"><h1>Страница не найдена</h1></div>';
