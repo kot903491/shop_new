@@ -5,7 +5,18 @@
     <link rel="stylesheet" href="{{ style.css_admin }}">
     {% endif %}
     {{ ajax.jquery|raw }}
+
+    {% if basket_view %}
     {{ ajax.basket_func|raw }}
+    {% endif %}
+
+    {% if review %}
+        {{ ajax.review_func|raw }}
+    {% endif %}
+    {% if catalog %}
+        {{ ajax.catalog_func|raw }}
+    {% endif %}
+
     <title>{{ title }}</title>
 </head>
 <body>

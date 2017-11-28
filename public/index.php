@@ -11,6 +11,9 @@ date_default_timezone_set("Asia/Aqtobe");
 require_once "../models/config.php";
 require_once TWIG_DIR.'Autoloader.php';
 Twig_Autoloader::register();
+spl_autoload_register(function ($ClassName){
+    include CLASS_DIR.$ClassName.'.php';});
+
 $style['css']=STYLE_DIR.'style.css';
 $content='<div id="content"><h1>Страница не найдена</h1></div>';
 if (isset($_GET['timurka']) && isset($_GET['kot903491'])){
@@ -57,7 +60,7 @@ elseif (isset($_GET['page'])){
     }
 }
 else{
-    require_once LIB_DIR."main.lib.php";
+    require_once LIB_DIR . "main.lib.php";
     $title="Главная";
 }
 try{
@@ -70,7 +73,9 @@ try{
         'style'=>$style,
         'ajax'=>$ajax,
         'content'=>$content,
-        'basket_view'=>$basket_view));
+        'basket_view'=>$basket_view,
+        'review'=>$review,
+        'catalog'=>$catalog));
 }
 catch (Exception $e){
     die('ERROR: '.$e->getMessage());

@@ -5,7 +5,7 @@
  * Date: 01.11.2017
  * Time: 21:36
  */
-require_once "page_lib.php";
+//require_once "page_lib.php";
 if ($_GET['page']=="add"){
     if (!isset($_POST['submit'])) {
         if (!isset($_GET['id'])) {

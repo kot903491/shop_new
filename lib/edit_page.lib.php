@@ -6,7 +6,7 @@
  * Time: 21:04
  */
 
-require_once "page_lib.php";
+//require_once "page_lib.php";
 if($_GET['page']=='edit' && isset($_GET['id']) && isset($_POST['submit'])){
     $id=(int)htmlspecialchars(strip_tags($_GET['id']));
     $product=new page_lib();

@@ -9,11 +9,16 @@ if(isset($_GET['act'])){
     if($_GET['act']=='delete' && isset($_GET['id'])){
         $mysqli = mysqli_connect(SQL_SERVER, SQL_USER, SQL_PASS, dbname, SQL_PORT);
         $id=(int)htmlspecialchars(strip_tags($_GET['id']));
+        $res=$mysqli->query('SELECT s_img,b_img FROM gallery WHERE id='.$id);
+        $res=$res->fetch_row();
         $stmt=$mysqli->prepare("DELETE FROM product WHERE id=?");
         $stmt->bind_param("i",$id);
         $stmt->execute();
         $stmt->close();
         $mysqli->close();
+        foreach ($res as $value){
+            unlink(GALLERY_DIR.$value);
+        }
         header("Location:index.php?timurka=kot903491&kot903491=timurka&page=catalog");
     }
     elseif($_GET['act']=='edit' && isset($_GET['id'])){
@@ -46,6 +51,7 @@ else {
     }
     else{
         try{
+            $catalog=true;
             $loader = new Twig_Loader_Filesystem(TPL_DIR);
             $twig=new Twig_Environment($loader);
             $template=$twig->loadTemplate('catalog.tmpl');

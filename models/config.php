@@ -16,7 +16,9 @@ define('SQL_PORT','3306');
 define('dbname','comics_shop');
 
 define('GALLERY_DIR', SITE_ROOT . 'data'._DS);
-define('LIB_DIR', SITE_ROOT . 'engine'._DS);
+define('LIB_DIR', SITE_ROOT . 'lib'._DS);
+define('JS_DIR', SITE_ROOT . 'js'._DS);
+define('CLASS_DIR',SITE_ROOT.'classes'._DS);
 define('TWIG_DIR',SITE_ROOT.'lib'._DS.'Twig'._DS);
 define('TPL_DIR', SITE_ROOT . 'templates'._DS);
 define('STYLE_DIR',SITE_DIR.'style'._DS);
@@ -36,6 +38,10 @@ $style=array(
     'envelope'=>STYLE_ICO.'envelope.svg',
     'phone'=>STYLE_ICO.'phone-call.svg');
 
-$ajax=array('jquery'=>'<script src="'.LIB_DIR.'jquery.js"></script>',
-    'basket_func'=>'<script src="'.LIB_DIR.'functions.js"></script>');
+$ajax=array('jquery'=>'<script src="'.JS_DIR.'jquery.js"></script>',
+    'basket_func'=>'<script src="'.JS_DIR.'basket.js"></script>',
+    'review_func'=>'<script src="'.JS_DIR.'review.js"></script>',
+    'catalog_func'=>'<script src="'.JS_DIR.'catalog.js"></script>');
 $basket_view=true;
+$review=false;
+$catalog=false;

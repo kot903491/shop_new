@@ -6,11 +6,12 @@
  * Time: 20:18
  */
 if ($_GET['id']!=''){
-    require_once LIB_DIR."page_lib.php";
+    //require_once LIB_DIR."page_lib.php";
     $getPage = new page_lib();
     $id=(int)htmlspecialchars(strip_tags($_GET['id']));
     $getPage->getPage($id);
     try{
+        $review=true;
         $loader = new Twig_Loader_Filesystem(TPL_DIR);
         $twig=new Twig_Environment($loader);
         $template=$twig->loadTemplate('goods.tmpl');
