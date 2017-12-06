@@ -46,4 +46,14 @@ $basket_view=true;
 $review=false;
 $catalog=false;
 
+$data=array('title'=>$title,
+    'footer'=>'footer.tmpl',
+    'header'=>'header.tmpl',
+    'style'=>$style,
+    'ajax'=>$ajax,
+    'content'=>$content,
+    'basket_view'=>$basket_view,
+    'review'=>$review,
+    'catalog'=>$catalog);
+
 
